@@ -9,9 +9,11 @@
 // };
 
 // Alternative
-type TButtonProps = React.ComponentProps<"button">;
+type TButtonProps = React.ComponentProps<"button"> & {
+  variant: "primary" | "secondary";
+};
 
-function Button({ type, autoFocus, ...props }: TButtonProps) {
+function Button({ type, autoFocus, variant, ...props }: TButtonProps) {
   return (
     <button type={type} autoFocus={autoFocus} {...props}>
       Click Me
