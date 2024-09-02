@@ -1,8 +1,7 @@
-import { useRef } from "react";
+const buttonTextOptions = ["Click Me", "Click", "Click Here"] as const;
 
 function Button() {
-  const ref = useRef<HTMLButtonElement>(null);
-  return <button ref={ref}>Click Me</button>;
+  return <button>{JSON.stringify(buttonTextOptions)}</button>;
 }
 
 export default Button;
