@@ -1,7 +1,12 @@
-const buttonTextOptions = ["Click Me", "Click", "Click Here"] as const;
+type User = {
+  sessionId: string;
+  name: string;
+};
+
+type Guest = Omit<User, "name">;
 
 function Button() {
-  return <button>{JSON.stringify(buttonTextOptions)}</button>;
+  return <button>ada</button>;
 }
 
 export default Button;
