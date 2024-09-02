@@ -1,18 +1,8 @@
-import { useState } from "react";
-
-type User = {
-  name: string;
-};
+import { useRef } from "react";
 
 function Button() {
-  const [count, setCount] = useState(0);
-  const [text, setText] = useState("Click Me");
-  const [isPrimary, setIsPrimary] = useState(true);
-  const [user, setUser] = useState<User | null>(null);
-
-  const name = user?.name;
-
-  return <button>Click Me</button>;
+  const ref = useRef<HTMLButtonElement>(null);
+  return <button ref={ref}>Click Me</button>;
 }
 
 export default Button;
