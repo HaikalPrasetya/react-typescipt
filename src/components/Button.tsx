@@ -1,14 +1,9 @@
-type TButtonProps = {
-  type: "submit" | "reset" | "button";
-  color: "primary" | "secondary";
-};
+function Button() {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    console.log("Clicked");
+  };
 
-type SuperButtonProps = TButtonProps & {
-  variant: "primary" | "secondary";
-};
-
-function Button({ color, type, variant }: SuperButtonProps) {
-  return <button>Click Me</button>;
+  return <button onClick={handleClick}>Click Me</button>;
 }
 
 export default Button;
