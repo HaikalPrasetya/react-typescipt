@@ -1,9 +1,8 @@
 type ButtonProps = {
-  borderRadius: Record<string, string>; // Record<key, value> is the same as { key: value }
+  onClick: (test: string) => number;
 };
 
-function Button({ borderRadius }: ButtonProps) {
-  console.log(borderRadius);
+function Button({ onClick }: ButtonProps) {
   return <button>Button</button>;
 }
 
