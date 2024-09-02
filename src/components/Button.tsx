@@ -1,12 +1,9 @@
-// const convertToArray = <T,>(value: T): T[] => {
-//   return [value];
-// };
+type ButtonProps<T> = {
+  countValue: T;
+  countHistory: T[];
+};
 
-function convertToArray<T>(value: T): T[] {
-  return [value];
-}
-
-function Button() {
+function Button<T>({ countValue, countHistory }: ButtonProps<T>) {
   return <button>ada</button>;
 }
 
