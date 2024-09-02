@@ -1,11 +1,14 @@
-type User = {
-  sessionId: string;
-  name: string;
-};
+import { useEffect } from "react";
 
-type Guest = Omit<User, "name">;
+type ButtonColor = "red" | "green" | "blue";
 
 function Button() {
+  useEffect(() => {
+    const previousButtonColor = localStorage.getItem(
+      "buttonColor"
+    ) as ButtonColor;
+  }, []);
+
   return <button>ada</button>;
 }
 
