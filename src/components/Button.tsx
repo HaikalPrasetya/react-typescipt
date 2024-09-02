@@ -1,5 +1,5 @@
 type ButtonProps = {
-  children: React.ReactNode;
+  children: JSX.Element;
 };
 
 function Button({ children }: ButtonProps) {

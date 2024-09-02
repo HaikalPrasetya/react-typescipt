@@ -1,9 +1,11 @@
 import Button from "./components/button";
 
 function App() {
+  const icon = <i></i>;
+
   return (
     <div>
-      <Button>Click me</Button>
+      <Button>{icon}</Button>
     </div>
   );
 }
