@@ -1,11 +1,12 @@
+import { useState } from "react";
 import Button from "./components/button";
 
 function App() {
-  const icon = <i></i>;
+  const [count, setCount] = useState(0);
 
   return (
     <div>
-      <Button>{icon}</Button>
+      <Button setCount={setCount} />
     </div>
   );
 }
