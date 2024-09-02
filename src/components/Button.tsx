@@ -1,9 +1,9 @@
 type ButtonProps = {
-  onClick: (test: string) => number;
+  children: React.ReactNode;
 };
 
-function Button({ onClick }: ButtonProps) {
-  return <button>Button</button>;
+function Button({ children }: ButtonProps) {
+  return <button>{children}</button>;
 }
 
 export default Button;
