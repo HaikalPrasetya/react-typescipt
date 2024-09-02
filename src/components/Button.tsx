@@ -1,9 +1,11 @@
-type ButtonProps<T> = {
-  countValue: T;
-  countHistory: T[];
+import { type Color } from "../utils/types";
+
+type ButtonProps = {
+  color: Color;
+  fontSize: number;
 };
 
-function Button<T>({ countValue, countHistory }: ButtonProps<T>) {
+function Button() {
   return <button>ada</button>;
 }
 
