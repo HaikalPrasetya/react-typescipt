@@ -1,24 +1,14 @@
-// interface IButtonProps {
-//   text: string;
-//   count: number;
-// }
+type TButtonProps = {
+  type: "submit" | "reset" | "button";
+  color: "primary" | "secondary";
+};
 
-// type TButtonProps = {
-//   type: "submit" | "reset" | "button";
-//   autoFocus?: boolean;
-// };
-
-// Alternative
-type TButtonProps = React.ComponentProps<"button"> & {
+type SuperButtonProps = TButtonProps & {
   variant: "primary" | "secondary";
 };
 
-function Button({ type, autoFocus, variant, ...props }: TButtonProps) {
-  return (
-    <button type={type} autoFocus={autoFocus} {...props}>
-      Click Me
-    </button>
-  );
+function Button({ color, type, variant }: SuperButtonProps) {
+  return <button>Click Me</button>;
 }
 
 export default Button;
