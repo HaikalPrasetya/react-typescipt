@@ -1,9 +1,22 @@
-type ButtonProps = {
-  setCount: React.Dispatch<React.SetStateAction<number>>;
-};
+// interface IButtonProps {
+//   text: string;
+//   count: number;
+// }
 
-function Button({ setCount }: ButtonProps) {
-  return <button>Click Me</button>;
+// type TButtonProps = {
+//   type: "submit" | "reset" | "button";
+//   autoFocus?: boolean;
+// };
+
+// Alternative
+type TButtonProps = React.ComponentProps<"button">;
+
+function Button({ type, autoFocus, ...props }: TButtonProps) {
+  return (
+    <button type={type} autoFocus={autoFocus} {...props}>
+      Click Me
+    </button>
+  );
 }
 
 export default Button;
