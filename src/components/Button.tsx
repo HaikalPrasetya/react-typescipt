@@ -1,9 +1,18 @@
-function Button() {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log("Clicked");
-  };
+import { useState } from "react";
 
-  return <button onClick={handleClick}>Click Me</button>;
+type User = {
+  name: string;
+};
+
+function Button() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("Click Me");
+  const [isPrimary, setIsPrimary] = useState(true);
+  const [user, setUser] = useState<User | null>(null);
+
+  const name = user?.name;
+
+  return <button>Click Me</button>;
 }
 
 export default Button;
